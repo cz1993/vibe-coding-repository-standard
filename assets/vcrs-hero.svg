@@ -1,59 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="title desc">
   <title id="title">Vibe Coding Repository Standard</title>
-  <desc id="desc">A visual showing fast AI development guided by repository rules, tests, and independent review.</desc>
+  <desc id="desc">Build fast with AI and keep your repository sustainable through clear context, evidence-based changes, independent review, and regular maintenance.</desc>
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
-      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="0.58" stop-color="#111827"/>
       <stop offset="1" stop-color="#172554"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#8b5cf6"/>
       <stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.28"/>
-    </filter>
+    <linearGradient id="accentText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4b5fd"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+    <clipPath id="frameClip">
+      <rect width="1200" height="420" rx="30"/>
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="420" rx="30" fill="url(#bg)"/>
-  <circle cx="1110" cy="70" r="150" fill="#7c3aed" opacity="0.10"/>
-  <circle cx="1030" cy="380" r="190" fill="#22d3ee" opacity="0.08"/>
+  <!-- Everything decorative is clipped to the rounded frame. -->
+  <g clip-path="url(#frameClip)">
+    <rect width="1200" height="420" fill="url(#background)"/>
+    <circle cx="1110" cy="54" r="154" fill="#7c3aed" opacity="0.12"/>
+    <circle cx="1040" cy="396" r="204" fill="#22d3ee" opacity="0.09"/>
+    <path d="M720 0h480v420H770c42-65 49-136 24-213C775 148 750 79 720 0Z" fill="#0f172a" opacity="0.16"/>
+  </g>
 
-  <g transform="translate(70 72)">
+  <!-- Subtle frame stroke prevents the rounded edge from disappearing on dark pages. -->
+  <rect x="1" y="1" width="1198" height="418" rx="29" fill="none" stroke="#334155" stroke-opacity="0.55" stroke-width="2"/>
+
+  <!-- Product mark -->
+  <g transform="translate(70 58)">
     <rect width="108" height="108" rx="24" fill="#0f172a" stroke="url(#accent)" stroke-width="4"/>
     <rect x="22" y="24" width="64" height="58" rx="9" fill="none" stroke="url(#accent)" stroke-width="5"/>
-    <path d="M22 40h64" stroke="url(#accent)" stroke-width="5"/>
+    <path d="M22 40h64" fill="none" stroke="url(#accent)" stroke-width="5"/>
     <path d="M38 63l9 9 22-24" fill="none" stroke="#f8fafc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <text x="70" y="230" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="48" font-weight="750">Vibe Coding Repository Standard</text>
-  <text x="70" y="279" fill="#cbd5e1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="25">Build fast with AI. Keep the repository understandable.</text>
-  <text x="70" y="326" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="19">Rules · skills · tests · review · maintenance</text>
-
-  <g filter="url(#shadow)" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-    <g transform="translate(770 74)">
-      <rect width="330" height="74" rx="16" fill="#f8fafc"/>
-      <circle cx="38" cy="37" r="17" fill="#7c3aed"/>
-      <text x="38" y="43" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">1</text>
-      <text x="70" y="32" fill="#0f172a" font-size="18" font-weight="700">Understand the repository</text>
-      <text x="70" y="54" fill="#475569" font-size="14">Trace real entry points and evidence</text>
-    </g>
-    <g transform="translate(810 174)">
-      <rect width="330" height="74" rx="16" fill="#f8fafc"/>
-      <circle cx="38" cy="37" r="17" fill="#2563eb"/>
-      <text x="38" y="43" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">2</text>
-      <text x="70" y="32" fill="#0f172a" font-size="18" font-weight="700">Change with clear boundaries</text>
-      <text x="70" y="54" fill="#475569" font-size="14">Small scope, safe tools, visible tests</text>
-    </g>
-    <g transform="translate(770 274)">
-      <rect width="330" height="74" rx="16" fill="#f8fafc"/>
-      <circle cx="38" cy="37" r="17" fill="#0f766e"/>
-      <text x="38" y="43" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">3</text>
-      <text x="70" y="32" fill="#0f172a" font-size="18" font-weight="700">Review independently</text>
-      <text x="70" y="54" fill="#475569" font-size="14">Evidence before approval</text>
-    </g>
+  <!-- Main message -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="70" y="220" fill="#f8fafc" font-size="43" font-weight="700" letter-spacing="-0.6">Vibe Coding Repository Standard</text>
+    <text x="70" y="270" fill="#cbd5e1" font-size="24" font-weight="450">
+      <tspan>Build fast with AI. Keep your repository</tspan><tspan dx="6" fill="url(#accentText)" font-weight="700">sustainable.</tspan>
+    </text>
+    <text x="70" y="314" fill="#94a3b8" font-size="17.5">Understandable to humans and agents · testable · reviewable · maintainable</text>
+    <text x="70" y="355" fill="#64748b" font-size="15.5" font-weight="600" letter-spacing="0.35">RULES · SKILLS · TESTS · REVIEW · MAINTENANCE</text>
   </g>
 
-  <path d="M935 148v26M975 248v26" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 8"/>
+  <!-- Process cards. Shadows use ordinary shapes for broad SVG renderer compatibility. -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <g transform="translate(800 50)">
+      <rect x="6" y="8" width="330" height="78" rx="17" fill="#020617" opacity="0.30"/>
+      <rect width="330" height="78" rx="17" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="39" cy="39" r="18" fill="#7c3aed"/>
+      <text x="39" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">1</text>
+      <text x="72" y="33" fill="#0f172a" font-size="18" font-weight="700">Make context clear</text>
+      <text x="72" y="56" fill="#475569" font-size="14">Structure, rules, and sources of truth</text>
+    </g>
+
+    <path d="M965 128v35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 7"/>
+
+    <g transform="translate(835 171)">
+      <rect x="6" y="8" width="330" height="78" rx="17" fill="#020617" opacity="0.30"/>
+      <rect width="330" height="78" rx="17" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="39" cy="39" r="18" fill="#2563eb"/>
+      <text x="39" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">2</text>
+      <text x="72" y="33" fill="#0f172a" font-size="18" font-weight="700">Change with evidence</text>
+      <text x="72" y="56" fill="#475569" font-size="14">Small scope, visible tests, safe tools</text>
+    </g>
+
+    <path d="M1000 249v35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 7"/>
+
+    <g transform="translate(800 292)">
+      <rect x="6" y="8" width="330" height="78" rx="17" fill="#020617" opacity="0.30"/>
+      <rect width="330" height="78" rx="17" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <circle cx="39" cy="39" r="18" fill="#0f766e"/>
+      <text x="39" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">3</text>
+      <text x="72" y="33" fill="#0f172a" font-size="18" font-weight="700">Sustain it over time</text>
+      <text x="72" y="56" fill="#475569" font-size="14">Independent review, regular upkeep</text>
+    </g>
+  </g>
 </svg>
