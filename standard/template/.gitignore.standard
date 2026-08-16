@@ -1,0 +1,23 @@
+# Merge applicable lines into the repository's real .gitignore.
+# Do not replace framework-specific ignore rules blindly.
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Logs and temporary audit output
+*.log
+artifacts/repo-audit/
+artifacts/repository-standard/
+
+# Common local caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor/OS noise
+.DS_Store
+Thumbs.db

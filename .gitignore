@@ -1,0 +1,31 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+.venv/
+venv/
+
+# Generated output
+dist/
+build/
+artifacts/
+*.log
+
+# Local audit inputs
+.audit-private/

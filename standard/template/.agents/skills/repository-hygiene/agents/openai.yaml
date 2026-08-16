@@ -1,0 +1,5 @@
+interface:
+  display_name: "Repository Hygiene"
+  short_description: "Read-only evidence-based repository cleanup audit"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+Vibe Coding Repository Standard (VCRS)
+Copyright 2026 VCRS contributors
+
+Licensed under the Apache License, Version 2.0.
+
+This distribution contains original documentation, prompts, templates, and
+validation code. It references third-party projects and documentation but does
+not vendor their source code. See THIRD_PARTY_NOTICES.md.

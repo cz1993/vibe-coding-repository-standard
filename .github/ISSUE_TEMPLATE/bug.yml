@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a reproducible defect in VCRS documentation, prompts, template, or validation.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Use synthetic examples and remove credentials, private code, personal data, and production details. Security vulnerabilities belong in a private security report, not this form.
+  - type: input
+    id: version
+    attributes:
+      label: VCRS version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - README or public documentation
+        - Normative standard
+        - Repository template
+        - Validator or tests
+        - Agent prompt, skill, or configuration
+        - GitHub workflow or community file
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and why it is a defect.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include safe commands or a synthetic example.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, agent/tool and version, and selected repository profile when relevant.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: I removed credentials, private repository content, personal/customer data, and production details.
+          required: true
+        - label: This is not an undisclosed security vulnerability.
+          required: true

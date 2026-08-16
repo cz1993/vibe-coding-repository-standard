@@ -1,0 +1,48 @@
+name: VCRS quality
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Run public-package tests
+        run: python -m unittest discover -s tests/quality -p 'test_*.py' -v
+
+      - name: Run starter-template validator tests
+        run: python -m unittest discover -s standard/template/tests/standards -p 'test_*.py' -v
+
+      - name: Validate the public repository
+        run: python scripts/quality/validate_public_repository.py --root . --strict
+
+      - name: Audit publication safety
+        run: python scripts/quality/audit_publication.py --root . --strict
+
+      - name: Validate the adaptable starter template
+        run: python standard/template/scripts/maintenance/validate_repository_standard.py --root standard/template
+
+      - name: Build and inspect a release archive
+        shell: bash
+        run: |
+          python scripts/release/build_release.py \
+            --root . \
+            --output-dir "$RUNNER_TEMP/vcrs-release" \
+            --skip-validation
+          python -m zipfile -t "$RUNNER_TEMP/vcrs-release/vibe-coding-repository-standard-v$(cat VERSION).zip"

@@ -1,0 +1,49 @@
+name: Repository standard
+
+on:
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - ".repo-standard.json"
+      - ".codex/**"
+      - ".agents/**"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".github/workflows/repository-standard.yml"
+      - "docs/**"
+      - "scripts/maintenance/**"
+      - "tests/standards/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "AGENTS.md"
+      - ".repo-standard.json"
+      - ".codex/**"
+      - ".agents/**"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".github/workflows/repository-standard.yml"
+      - "docs/**"
+      - "scripts/maintenance/**"
+      - "tests/standards/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test repository-standard validator
+        run: python -m unittest discover -s tests/standards -p 'test_*.py' -v
+
+      - name: Validate repository standard
+        run: python scripts/maintenance/validate_repository_standard.py --root .

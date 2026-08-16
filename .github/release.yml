@@ -1,0 +1,22 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+  categories:
+    - title: Breaking or normative changes
+      labels:
+        - breaking-change
+        - normative
+    - title: Validator and tooling
+      labels:
+        - validator
+        - tooling
+    - title: Documentation and education
+      labels:
+        - documentation
+    - title: Fixes
+      labels:
+        - bug
+    - title: Other changes
+      labels:
+        - "*"

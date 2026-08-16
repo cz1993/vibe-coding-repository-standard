@@ -1,0 +1,5 @@
+interface:
+  display_name: "Repository Bootstrap"
+  short_description: "Audit and establish the repository governance baseline"
+policy:
+  allow_implicit_invocation: false

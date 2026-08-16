@@ -1,0 +1,60 @@
+name: Standard or feature proposal
+description: Propose an evidence-backed improvement, profile, adapter, or workflow.
+title: "[Proposal]: "
+labels:
+  - proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        VCRS prefers a demonstrated user problem over feature accumulation. Major or normative proposals should explain evidence, alternatives, compatibility, and maintenance cost.
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Who experiences the problem, and what cannot be done reliably today?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide public, anonymized evidence, examples, or measurements. Distinguish facts from assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Proposed outcome
+      description: Describe the behavior or guidance, not only an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include doing nothing and using existing project capabilities.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Compatibility, safety, and maintenance impact
+      description: Cover migrations, permissions, privacy, dependencies, ownership, and review cadence.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: How should success be validated?
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: I am not proposing mandatory complexity without a demonstrated need.
+          required: true
+        - label: Any compatibility or performance claim is scoped to evidence I can provide.
+          required: true

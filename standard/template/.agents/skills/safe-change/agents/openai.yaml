@@ -1,0 +1,5 @@
+interface:
+  display_name: "Safe Change"
+  short_description: "Trace, implement, test, and review one bounded change"
+policy:
+  allow_implicit_invocation: true

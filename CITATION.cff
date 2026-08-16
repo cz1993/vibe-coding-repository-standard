@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If VCRS helps your work, please cite the project and the release you used."
+title: "Vibe Coding Repository Standard"
+type: software
+authors:
+  - name: "Vibe Coding Repository Standard contributors"
+version: 0.1.0
+date-released: 2026-08-15
+license: Apache-2.0
+abstract: >-
+  An open-source community repository standard, starter template, and agent workflow for
+  turning vibe-coded codebases into understandable, testable, maintainable
+  software, with a Codex-first reference implementation.
+keywords:
+  - vibe coding
+  - AI coding agents
+  - repository standard
+  - Codex
+  - AGENTS.md
+  - multi-agent code review
+  - repository hygiene

@@ -1,0 +1,40 @@
+# Vibe Coding Repository Standard
+
+> An open-source repository operating standard, starter template, validator, and multi-agent workflow for understandable, testable, and maintainable software development with AI coding agents.
+
+VCRS is agent-compatible at the principles level and Codex-first in the current reference implementation. It does not guarantee production readiness, security, compatibility across all agents, or search visibility.
+
+## Start here
+
+- README: README.md
+- White paper: WHITEPAPER.md
+- Getting started: docs/getting-started.md
+- FAQ: docs/faq.md
+- Glossary: docs/glossary.md
+
+## Standard
+
+- Normative repository standard: standard/handbook/02-canonical-repository-standard.md
+- Evaluation and design rationale: standard/handbook/01-evaluation-and-refined-strategy.md
+- Multi-agent protocol: standard/handbook/05-multi-agent-development-protocol.md
+- Agent, skill, MCP, memory, and hook governance: standard/handbook/06-agent-skill-mcp-governance.md
+- Maintenance plan: standard/handbook/07-maintenance-and-hygiene-plan.md
+- Design principles: standard/handbook/08-design-principles-and-pattern-guidance.md
+- Source register: standard/handbook/09-source-register.md
+
+## Practical resources
+
+- Repository profiles: standard/profiles/
+- Ready-to-run prompts: standard/prompts/
+- Starter template: standard/template/
+- Publication audit: docs/publication-audit.md
+- Discovery and launch guide: docs/discovery-and-launch.md
+
+## License and contribution
+
+- License: LICENSE
+- Contributing: CONTRIBUTING.md
+- Security: SECURITY.md
+- Governance: GOVERNANCE.md
+
+This file is a curated source map based on the community `llms.txt` proposal. It is not an access-control file, a formal web standard, or a ranking guarantee.

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "standard": {
+    "id": "VCRS-1",
+    "version": "0.1.0"
+  },
+  "repository": {
+    "name": "vibe-coding-repository-standard",
+    "primary_profile": "monorepo",
+    "secondary_profiles": ["infrastructure"],
+    "risk_class": "low",
+    "governance_owner": "project-maintainers",
+    "last_reviewed": "2026-08-15"
+  },
+  "agent_context": {
+    "agents_md_max_bytes": 16384,
+    "allowed_nested_instruction_files": [
+      "standard/template/AGENTS.md"
+    ],
+    "allowed_legacy_instruction_files": []
+  },
+  "skills": {
+    "active": []
+  },
+  "optional_capabilities": {
+    "mcp_servers": [],
+    "memory_enabled": false,
+    "hooks_enabled": false
+  },
+  "path_exceptions": [],
+  "exceptions": []
+}

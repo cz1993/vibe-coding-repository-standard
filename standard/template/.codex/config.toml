@@ -1,0 +1,24 @@
+# Safe repository baseline. Review this file before marking a repository trusted.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+project_doc_max_bytes = 16384
+project_doc_fallback_filenames = []
+
+[sandbox_workspace_write]
+network_access = false
+
+[features]
+memories = false
+hooks = false
+multi_agent = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+interrupt_message = true
+
+[shell_environment_policy]
+# Apply Codex's automatic exclusions for environment variables whose names look
+# like secrets. Add narrowly scoped exceptions only when a verified workflow
+# requires them.
+ignore_default_excludes = false

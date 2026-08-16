@@ -1,0 +1,31 @@
+name: Documentation improvement
+description: Report confusing, missing, outdated, inaccessible, or hard-to-find guidance.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or section
+      placeholder: docs/getting-started.md — Step 3
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who is blocked or confused?
+      description: For example, a first-time vibe coder, maintainer, security reviewer, or tool author.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: A draft is welcome but not required.
